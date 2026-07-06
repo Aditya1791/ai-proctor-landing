@@ -1,0 +1,230 @@
+/*
+ * Futuristic Cyber-Neon Redesign CSS
+ * Cyberpunk, Glassmorphism, and Neon-glow elements
+ */
+
+:root {
+  --neon-cyan: #00f3ff;
+  --neon-purple: #bf55ec;
+  --neon-magenta: #ff007f;
+  --bg-dark: #08090d;
+  --bg-card: rgba(13, 16, 27, 0.65);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  
+  --glow-shadow-cyan: 0 0 10px rgba(0, 243, 255, 0.4), 0 0 20px rgba(0, 243, 255, 0.2);
+  --glow-shadow-purple: 0 0 10px rgba(191, 85, 236, 0.4), 0 0 20px rgba(191, 85, 236, 0.2);
+  --glow-shadow-magenta: 0 0 10px rgba(255, 0, 127, 0.4), 0 0 20px rgba(255, 0, 127, 0.2);
+}
+
+/* Base Styles & Background */
+body.content-bg, .content-bg {
+  background-color: var(--bg-dark) !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(191, 85, 236, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 243, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(8, 9, 13, 1) 0px, rgba(4, 4, 6, 1) 100%) !important;
+  background-attachment: fixed;
+  color: var(--text-main) !important;
+  min-height: 100vh;
+}
+
+.content {
+  background: transparent !important;
+}
+
+/* Typography & Headers */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--text-main) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Gradients */
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00f3ff 0%, #00a2ff 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 30px rgba(0, 243, 255, 0.15);
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #bf55ec 0%, #d946ef 100%);
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 30px rgba(191, 85, 236, 0.15);
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--bg-card) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 243, 255, 0.3) !important;
+  box-shadow: 
+    0 16px 45px 0 rgba(0, 0, 0, 0.6), 
+    0 0 20px rgba(0, 243, 255, 0.1) !important;
+}
+
+/* Glass Navbar */
+.glass-navbar {
+  background: rgba(8, 9, 13, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid var(--border-glass) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+  padding: 0.8rem 1rem !important;
+  transition: all 0.3s ease;
+}
+
+/* Neon Buttons */
+.btn-neon {
+  display: inline-block;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--neon-cyan) !important;
+  background: transparent;
+  border: 2px solid var(--neon-cyan) !important;
+  border-radius: 30px !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: var(--glow-shadow-cyan);
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none !important;
+}
+
+.btn-neon:hover {
+  background: var(--neon-cyan) !important;
+  color: var(--bg-dark) !important;
+  box-shadow: 
+    0 0 25px rgba(0, 243, 255, 0.6),
+    0 0 10px rgba(0, 243, 255, 0.3) !important;
+  text-shadow: none !important;
+  transform: translateY(-2px);
+}
+
+.btn-neon-purple {
+  color: var(--neon-purple) !important;
+  border-color: var(--neon-purple) !important;
+  text-shadow: var(--glow-shadow-purple);
+  box-shadow: 0 0 12px rgba(191, 85, 236, 0.15) !important;
+}
+
+.btn-neon-purple:hover {
+  background: var(--neon-purple) !important;
+  color: var(--text-main) !important;
+  box-shadow: 
+    0 0 25px rgba(191, 85, 236, 0.6),
+    0 0 10px rgba(191, 85, 236, 0.3) !important;
+}
+
+/* Form inputs overrides */
+.form-control, .custom-select {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-main) !important;
+}
+
+.form-control:focus, .custom-select:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--neon-cyan) !important;
+  box-shadow: 0 0 12px rgba(0, 243, 255, 0.25) !important;
+}
+
+.input-group-text {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: var(--neon-cyan) !important;
+}
+
+/* Spacers & Alignments */
+.my-large {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
+/* Icons & Features */
+.icon-box {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid var(--border-glass) !important;
+  border-radius: 16px !important;
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(191, 85, 236, 0.3) !important;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+.feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--neon-cyan);
+  font-weight: bold;
+  text-shadow: var(--glow-shadow-cyan);
+}
+
+/* Map IFrame Styling */
+.map {
+  border: 1px solid var(--border-glass) !important;
+  box-shadow: var(--glow-shadow-cyan);
+  width: 100% !important;
+}
+
+/* Footer redesign */
+.sticky-footer-futuristic {
+  background: rgba(4, 4, 6, 0.95) !important;
+  border-top: 1px solid var(--border-glass) !important;
+}
+
+/* SweetAlert 2 Customizations for Cyber Theme */
+.swal2-popup {
+  background: var(--bg-dark) !important;
+  border: 1px solid var(--neon-cyan) !important;
+  border-radius: 16px !important;
+  color: var(--text-main) !important;
+  box-shadow: var(--glow-shadow-cyan) !important;
+}
+
+.swal2-title, .swal2-html-container {
+  color: var(--text-main) !important;
+}
+
+.swal2-confirm {
+  background-color: transparent !important;
+  border: 2px solid var(--neon-cyan) !important;
+  color: var(--neon-cyan) !important;
+  box-shadow: var(--glow-shadow-cyan) !important;
+}
+
+.swal2-confirm:hover {
+  background-color: var(--neon-cyan) !important;
+  color: var(--bg-dark) !important;
+}

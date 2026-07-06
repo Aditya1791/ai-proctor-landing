@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Project AI - The Future of Learning Integrity</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="120x120"
+    href="static/assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="static/assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="static/assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/assets/img/favicon/site.webmanifest">
+  <link rel="mask-icon" color="#ffffff"
+    href="static/assets/img/favicon/safari-pinned-tab.svg">
+
+  <!-- Fontawesome -->
+  <link type="text/css" rel="stylesheet"
+    href="static/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- Pixel CSS -->
+  <link type="text/css" rel="stylesheet" href="static/css/pixel.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Futuristic Redesign CSS -->
+  <link type="text/css" rel="stylesheet" href="static/css/futuristic.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+</head>
+
+<body class="content-bg">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<header class="header-global">
+  <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg glass-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_wEt2nn.json" background="transparent"
+          speed="1" style="width: 50px; height: 50px; margin-right: 10px;" loop autoplay></lottie-player>
+        <span class="text-gradient-cyan" style="font-size:22px; font-weight: bold; letter-spacing: 2px;">Project
+          AI</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars" style="color:#00f3ff; font-size:28px; text-shadow: var(--glow-shadow-cyan);"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav ml-auto align-items-center">
+          <li class="nav-item mx-1">
+            <a class="btn-neon" style="padding: 8px 15px; font-size: 0.8rem;" href="login.html"><span
+                class="fas fa-sign-in-alt"> Login</span></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="btn-neon"
+              style="padding: 8px 15px; font-size: 0.8rem; border-color: var(--neon-purple); color: var(--neon-purple);"
+              href="register.html"><span class="fas fa-user-plus"> Register</span></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="btn-neon" style="padding: 8px 15px; font-size: 0.8rem;" href="contact.html"><span
+                class="fas fa-phone-alt"> Contact</span></a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="btn-neon" style="padding: 8px 15px; font-size: 0.8rem;" href="faq.html"><span class="fas fa-question">
+                FAQ</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <!--<div class="container">-->
+  <br><br><br>
+  
+ <main>
+ <section class="d-flex align-items-center my-5 mt-lg-6 mb-lg-5">
+            <div class="container">
+                    <div class="col-12 d-flex align-items-center justify-content-center">
+                        <div class="glass-card p-4 p-lg-5 w-100 fmxw-650">
+                            <div class="text-center text-md-center mb-4 mt-md-0">
+                                <h1 class="mb-0 h3 text-gradient-cyan">Sign in to our platform</h1>
+                            </div>
+							<img src="static/secure_login.png">
+              <div class="card-body">
+                            <form action="" method="POST" class="mt-4" onsubmit="return validateForm()">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                        </div>
+									<input name="email" class="form-control" placeholder="example@company.com" type="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                            </div>
+									<input name="password" type="text" class="form-control" placeholder="Password" style="-webkit-text-security:disc;" aria-label="Password" required>                                        </div>
+                                </div>
+                                </div>
+
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choose User Type</label>
+                                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="user_type" required>
+                                            <option value="student">Student</option>
+                                            <option value="teacher">Professor</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <video id="stream" width="370" height="320"></video>
+                                        <canvas id="capture" width="370" height="320" style="display:none;"></canvas>
+                                            <button id="btn-capture" type="button" class="btn-neon justify-content-center">Capture Image</button>
+                                        <br><br>
+                                            <div id="snapshot"></div>
+                                        <input type="hidden" id="image_hidden" name="image_hidden">
+                                        </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div><a href="/lostpassword" class="font-weight-bold">Lost password?</a></div>
+                                </div>
+                            <button type="submit" class="btn-neon w-100">Sign in</button>
+                        </form>
+             
+                        <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+                            <span class="font-weight-normal">
+                                Not registered?
+                             <a href="register.html" class="font-weight-bold">Create account</a>
+                            </span>
+                        </div>
+              </div>
+  </div>
+  <div>
+  </div>
+</div>
+</section>
+</main>
+<script>
+    var btnCapture = document.getElementById("btn-capture");
+    var stream = document.getElementById("stream");
+    var capture = document.getElementById("capture");
+    var snapshot = document.getElementById("snapshot");
+    var cameraStream = null;
+    
+    btnCapture.addEventListener( "click", captureSnapshot );
+
+    function startStreaming() {
+    
+      var mediaSupport = 'mediaDevices' in navigator;
+    
+      if( mediaSupport && null == cameraStream ) {
+    
+        navigator.mediaDevices.getUserMedia( { video: true } )
+        .then( function( mediaStream ) {
+          cameraStream = mediaStream;
+          stream.srcObject = mediaStream;
+          stream.play();
+        })
+        .catch( function( err ) {
+          console.log( "Unable to access camera: " + err );
+        });
+      }
+      else {
+        alert( 'Your browser does not support media devices.' );
+        return;
+      }
+    }
+    
+    function stopStreaming() {
+      if( null != cameraStream ) {
+        var track = cameraStream.getTracks()[ 0 ];
+        track.stop();
+        stream.load();
+        cameraStream = null;
+      }
+    }
+    
+    function captureSnapshot() {
+      if( null != cameraStream ) {
+        var ctx = capture.getContext( '2d' );
+        var img = new Image();
+        ctx.drawImage( stream, 0, 0, capture.width, capture.height );
+        img.src		= capture.toDataURL( "image/png" );
+        img.width	= 370;
+        img.height	= 320;
+        //console.log(capture.toDataURL( "image/png" ));
+        snapshot.innerHTML = '';
+        snapshot.appendChild( img );
+        var d1 = capture.toDataURL("image/png");
+        var res = d1.replace("data:image/png;base64,", "");
+        console.log(res);
+        snapshot.innerHTML = '';
+        snapshot.appendChild( img );
+        $("#image_hidden").val(res)    
+      }
+    }
+    window.onload = function() {
+       startStreaming();
+    }
+
+    function validateForm() {
+       captureSnapshot();
+       if (!document.getElementById("image_hidden").value) {
+           alert("Please ensure your camera is enabled and capturing successfully.");
+           return false;
+       }
+       return true;
+    }
+    </script>
+
+  <!--</div>-->
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- Core -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script src="static/vendor/popper.js/dist/umd/popper.min.js"></script>
+  <script src="static/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="static/vendor/headroom.js/dist/headroom.min.js"></script>
+
+  <!-- Vendor JS -->
+  <script src="static/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+  <script src="static/vendor/nouislider/distribute/nouislider.min.js"></script>
+  <script
+    src="static/vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="static/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+  <script src="static/vendor/jarallax/dist/jarallax.min.js"></script>
+  <script src="static/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+  <script src="static/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+  <script src="static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="static/vendor/prismjs/prism.js"></script>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <!-- pixel JS -->
+  <script src="static/assets/js/pixel.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- VanillaTilt and AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize Animate On Scroll
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+
+    // Initialize VanillaTilt for glass cards
+    document.addEventListener("DOMContentLoaded", function () {
+      VanillaTilt.init(document.querySelectorAll(".glass-card"), {
+        max: 5,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.2,
+        scale: 1.02
+      });
+    });
+  </script>
+
+  <footer id="sticky-footer" class="py-4 sticky-footer-futuristic mt-5">
+    <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+      <p class="font-weight-bold font-medium mb-0" style="color: var(--text-main);">Copyright © Project AI
+        <span class="current-year" style="color: var(--neon-cyan);">
+          <script>document.write(new Date().getFullYear())</script>
+        </span>. All rights reserved.
+      </p>
+    </div><br>
+    <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+      <p class="font-weight-bold font-small mb-0"><span><a href="https://www.linkedin.com/in/aditya-ranjan-swain/"
+            style="color: var(--neon-purple); text-decoration: none;">Made
+            with &#128151 By ADITYA RANJAN SWAIN</a></span></p>
+    </div>
+  </footer>
+</body>
+
+</html>
